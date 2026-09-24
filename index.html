@@ -1,5 +1,247 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Website</title></head>
-<body><h1>Hello, World!</h1></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Section Website</title>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Each row/section */
+    .section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #home {
+        background: #f5f5f5;
+    }
+
+    #home .container {
+        column-gap: 50px;
+        row-gap: 20px;
+    }
+
+    #home h1 {
+        max-width: 600px;
+    }
+
+    #section2 {
+        background: #dfe9f3;
+    }
+
+    #section3 {
+        background: #e8f5e9;
+    }
+
+    #section4 {
+        background: #fff3e0;
+    }
+
+    #section5 {
+        background: #ede7f6;
+    }
+
+    .content {
+        /*text-align: center;*/
+    }
+
+    .content h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+
+    .content p.sub-heading {
+        font-size: 60px;
+    }
+
+    img.hero-image {
+        max-width: 400px;
+        border-radius: 100%;
+        width: 100%;
+    }
+
+    @media all and (max-width: 768px) {
+        .section {
+            padding: 30px;
+        }
+        
+        .section .container {
+            flex-wrap: wrap;
+        }
+
+    }
+
+
+
+
+    /* Right-side bullet navigation */
+    .side-nav {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .side-nav a {
+        width: 14px;
+        height: 14px;
+        background: #999;
+        border-radius: 50%;
+        display: block;
+
+        transition: all 0.3s ease;
+    }
+
+    /* Hover */
+    .side-nav a:hover {
+        background: #333;
+        transform: scale(1.3);
+    }
+
+    /* Active bullet */
+    .side-nav a.active {
+        background: #000;
+        transform: scale(1.4);
+    }
+
+    @media all and (max-width: 480px) {
+        .side-nav {
+            right: 15px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Right Navigation -->
+    <nav class="side-nav">
+        <a href="#home" class="active"></a>
+        <a href="#section2"></a>
+        <a href="#section3"></a>
+        <a href="#section4"></a>
+        <a href="#section5"></a>
+    </nav>
+
+
+    <!-- Section 1 -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="content">
+                <p class="sub-heading">Hi! I'm Ace</p>
+                <h1>Let me help you build your website!</h1>
+
+            </div>
+            <div class="content">
+                <img src="https://i.imgur.com/HIWcfiK.png" alt="Profile Image" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 2 -->
+    <section id="section2" class="section">
+        <div class="content">
+            <h1>Section 2</h1>
+            <p>This is the second section.</p>
+        </div>
+    </section>
+
+
+    <!-- Section 3 -->
+    <section id="section3" class="section">
+        <div class="content">
+            <h1>Section 3</h1>
+            <p>This is the third section.</p>
+        </div>
+    </section>
+
+
+    <!-- Section 4 -->
+    <section id="section4" class="section">
+        <div class="content">
+            <h1>Section 4</h1>
+            <p>This is the fourth section.</p>
+        </div>
+    </section>
+
+
+    <!-- Section 5 -->
+    <section id="section5" class="section">
+        <div class="content">
+            <h1>Section 5</h1>
+            <p>This is the fifth section.</p>
+        </div>
+    </section>
+
+
+    <script>
+        const sections = document.querySelectorAll(".section");
+        const navLinks = document.querySelectorAll(".side-nav a");
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                        });
+
+                        const activeLink = document.querySelector(
+                            `.side-nav a[href="#${entry.target.id}"]`
+                        );
+
+                        if (activeLink) {
+                            activeLink.classList.add("active");
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.5
+            }
+        );
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
 </html>
