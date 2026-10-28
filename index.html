@@ -3,148 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Section Website</title>
+    <title>Ace Web Portfolio | Ace Rex Miguel</title>
+    <meta name="description" content="Ace Rex Miguel - Sannin level Front-end Web developer from the Philippines" />
 
-    <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <link rel="stylesheet" href="/assets/styling.css">
 
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    /* Each row/section */
-    .section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px;
-        
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    #home {
-        background: #f5f5f5;
-    }
-
-    #home .container {
-        column-gap: 50px;
-        row-gap: 20px;
-    }
-
-    #home h1 {
-        max-width: 600px;
-    }
-
-    #section2 {
-        background: #dfe9f3;
-    }
-
-    #section3 {
-        background: #e8f5e9;
-    }
-
-    #section4 {
-        background: #fff3e0;
-    }
-
-    #section5 {
-        background: #ede7f6;
-    }
-
-    .content {
-        /*text-align: center;*/
-    }
-
-    .content h1 {
-        font-size: 60px;
-        margin-bottom: 20px;
-    }
-
-    .content p {
-        font-size: 20px;
-    }
-
-    .content p.sub-heading {
-        font-size: 60px;
-    }
-
-    img.hero-image {
-        max-width: 400px;
-        border-radius: 100%;
-        width: 100%;
-    }
-
-    @media all and (max-width: 768px) {
-        .section {
-            padding: 30px;
-        }
-        
-        .section .container {
-            flex-wrap: wrap;
-        }
-
-    }
-
-
-
-
-    /* Right-side bullet navigation */
-    .side-nav {
-        position: fixed;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1000;
-
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .side-nav a {
-        width: 14px;
-        height: 14px;
-        background: #999;
-        border-radius: 50%;
-        display: block;
-
-        transition: all 0.3s ease;
-    }
-
-    /* Hover */
-    .side-nav a:hover {
-        background: #333;
-        transform: scale(1.3);
-    }
-
-    /* Active bullet */
-    .side-nav a.active {
-        background: #000;
-        transform: scale(1.4);
-    }
-
-    @media all and (max-width: 480px) {
-        .side-nav {
-            right: 15px;
-        }
-    }
-    </style>
+    <!-- <script src="/assets/script.js" defer></script> -->
 </head>
 
 <body>
@@ -152,62 +20,1393 @@
     <!-- Right Navigation -->
     <nav class="side-nav">
         <a href="#home" class="active"></a>
-        <a href="#section2"></a>
-        <a href="#section3"></a>
-        <a href="#section4"></a>
-        <a href="#section5"></a>
+        <a href="#aboutMe"></a>
+        <a href="#whatido"></a>
+        <a href="#beyondWork"></a>
+        <a href="#works"></a>
+        <a href="#contact"></a>
     </nav>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
 
 
     <!-- Section 1 -->
     <section id="home" class="section">
         <div class="container">
-            <div class="content">
-                <p class="sub-heading">Hi! I'm Ace</p>
-                <h1>Let me help you build your website!</h1>
-
+            <div class="content m-center">
+                <p class="top-text">Hi! I'm Ace</p>
+                <h1>Let me help you build <span class="sub-heading">Your Website!</span></h1>
+                <div class="cta flex-center-i">
+                    <a href="#contact">Let's Talk</a>
+                    <a href="#aboutMe">Learn More</a>
+                </div>
             </div>
             <div class="content">
-                <img src="https://i.imgur.com/HIWcfiK.png" alt="Profile Image" class="hero-image">
+                <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/ace-img3.jpg" alt="Profile Image" class="hero-image">
             </div>
         </div>
     </section>
 
+    <style>
+    /* Home */
+    #home {
+        background-color: #000;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: linear-gradient(to bottom, rgb(0 0 0 / 85%), rgb(0 0 0 / 85%)), url("https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/hero-bg.webp");
+        padding: 100px 15px 100px;
+    }
 
-    <!-- Section 2 -->
-    <section id="section2" class="section">
-        <div class="content">
-            <h1>Section 2</h1>
-            <p>This is the second section.</p>
+    #home .container {
+        column-gap: 50px;
+        row-gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        max-width: 1100px;
+    }
+
+    section#home .content {
+        width: auto;
+    }
+
+    #home .cta a {
+        background-color: #fff;
+        color: #1d1d1d;
+
+    }
+
+    #home .cta a:nth-child(1) {
+        background-color: #00f5d4;
+        color: #000;
+    }
+
+    #home .cta a:hover {
+        background-color: #000;
+        color: #00f5d4;
+        border-color: #00f5d4;
+    }
+
+    img.hero-image {
+        max-width: 280px;
+        border-radius: 100%;
+        width: 100%;
+        border: 8px solid #b5b5b5;
+        box-shadow: 0 0 40px 10px #000000;
+    }
+
+    @media all and (max-width: 1024px) {
+        .flex-center-i {
+            justify-content: center;
+        }
+    }
+
+     @media all and (max-width: 1024px) {
+        #home .container {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #home .m-center {
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 36px;
+        }
+
+        h1 .sub-heading {
+            font-size: 44px;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        .section {
+            padding: 60px 40px 60px 24px;
+        }
+        
+        .section .container {
+            flex-wrap: wrap;
+        }
+
+        .content p.sub-heading,
+        .content h1 {
+            font-size: 36px;
+        }
+
+        .m-center {
+            text-align: center;
+        }
+
+        section#home {
+            padding: 70px 15px 70px;
+        }
+
+        .cta {
+            justify-content: center;
+        }
+
+        .sub-heading {
+            font-size: 48px;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+
+    }
+
+    @media all and (max-width: 480px) {
+        h2 {
+            font-size: 40px;
+        }
+
+        .sub-heading {
+            font-size: 40px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+        }    
+
+        .content p {
+            font-size: 14px;
+        }
+
+        .icons img {
+            max-height: 43px;
+        }
+
+    }
+    </style>
+
+    <!-- AboutMe -->
+    <section id="aboutMe" class="section">
+
+        <div class="container flex-container column-switch">
+            
+            <div class="content fl-container fl-align-center">
+                <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/aboutme-img-f.png" class="content-img"/>
+            </div>
+
+            <div class="content">
+                <div class="content-inner">
+                    <div class="spacer"></div>
+                    <h2>About <span class="hl">me</span></h2>
+                    <div class="c-separator"></div>
+                    <p class="align-t-justify">Hi! I'm Ace. If you are looking for a front-end web developer, then you&nbsp;are in the right place! I have been in the industry for over 8 years now, mostly handling wordpress, shopify, and a few wix websites. I&nbsp;enjoy building websites.</p>
+                    <p>Feel free to check my CV to know more about&nbsp;me!</p>
+
+                    <div class="cta fl-align-left">
+                        <a href="#">Check my CV</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </section>
+    <!-- End of AboutMe -->
+
+    <style>
+    .fl-align-left {
+        justify-content: flex-start;
+    }
+
+    .fl-align-center {
+        justify-content: center;
+    }
+
+    .fl-container {
+        display: flex;
+    }
+
+    .fl-wrap {
+        flex-wrap: wrap;
+    }
+
+    section#aboutMe {
+        padding-left: 0;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.09' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .content-img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    section#aboutMe .container {
+        row-gap: 30px;
+    }
+
+    section#aboutMe .flex-container {
+        max-width: 1100px;
+    }
+
+    section#aboutMe .content-inner {
+
+    }
+
+    @media all and (max-width: 1200px) {
+        section#aboutMe .flex-container {
+            column-gap: 30px;
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+        section#aboutMe .content-img {
+            height: 100vh;
+            object-fit: contain;
+            object-position: bottom;
+            padding-top: 60px;
+        }
+    }
+
+    @media all and (max-width: 1023px) {
+        section#aboutMe .content-inner {
+            padding-left: 40px;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        section#aboutMe {
+            min-height: unset;
+        }
+
+        section#aboutMe .content-inner {
+            padding-left: 30px;
+        }
+    }
+    </style>
 
 
-    <!-- Section 3 -->
-    <section id="section3" class="section">
-        <div class="content">
-            <h1>Section 3</h1>
-            <p>This is the third section.</p>
+    <section id="whatido" class="section">
+        <svg class="separator-top" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" fill="#ffffff" class="shape-fill"></path>
+        </svg>
+
+        <svg class="separator-bottom" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 120L550.03 120 599.91 65.88 649.97 120z" fill="#ffffff" class="shape-fill"></path>
+        </svg>
+
+        <div class="container flex-container column-switch">
+            
+            <div class="content">
+                <div class="content-inner fl-container">
+                    <h2 class="text-center no-margin fc-white">What I <span class="hl">do</span></h2>
+                    <div class="c-separator"></div>
+                    <div class="spacer-sm"></div>
+                    <div class="wid-list">
+                        <div class="list-dev">
+                            <span class="list-title">WEB</span>
+                            <div class="list-inner">
+                                <h3>Front-End Web Development & Design:</h3>
+                                <p>Building and designing clean, responsive websites.</p>
+                            </div>
+                        </div>
+                        <div class="list-qa">
+                            <span class="list-title">QA</span>
+                            <div class="list-inner">
+                                <h3>QA & Technical Support:</h3>
+                                <p>Troubleshooting issues and providing reliable tech support.</p>
+                            </div>
+                        </div>
+                        <div class="list-ai">
+                            <span class="list-title">AI</span>
+                            <div class="list-inner">
+                                <h3>AI-Augmented Workflows:</h3>
+                                <p>Utilizing advanced AI tools for optimized code assistance and code reviews.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-sm"></div>
+
+                    <div class="icons">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-html-5.png" alt="HTML icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-css-3.png" alt="CSS icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-java-script.png" alt="Javascript icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-php.webp" alt="Php icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-wordpress.png" alt="Wordpress icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-beaver.webp" alt="Beaver Builder icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-elementor.png" alt="Elementor icon" class="filter-white">
+                        
+
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-shopify.png" alt="Shopify icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-liquid.webp" alt="Liquid icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-wix.webp" alt="Wix icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-github.png" alt="Github icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-vscode.webp" alt="VS Code icon">
+
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-figma.png" alt="Figma icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-photoshop.png" alt="Photoshop icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-gsheets.png" alt="Google Sheets icon">
+
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-hubspot.webp" alt="Hubspot icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-intercom.webp" alt="Intercom icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-notion.webp" alt="Notion icon" class="filter-white">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-office.png" alt="Office icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-slack.webp" alt="Slack icon">
+
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-chatgpt.png" alt="Chatgpt icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-copilot.webp" alt="Copilot icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-gemini.webp" alt="Gemini icon">
+                        <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-canva.webp" alt="Canva icon">
+                    </div>
+                    <div class="spacer hide-on-ib"></div>
+                </div>
+            </div>
         </div>
+        
     </section>
+    <style>
+    /* What I do */
+    .filter-white {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1328%) hue-rotate(229deg) brightness(119%) contrast(100%);
+    }
+
+    .gl-spacer {
+        height: 50px;
+    }
+
+    .spacer-sm {
+        height: 30px;
+    }
+
+    .hl {
+        color: #00F5D4;
+        text-shadow: 1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, -1px 1px 1px #000;
+    }
+
+    img.solo-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: 43% center;
+    }
+
+    section#whatido {
+        flex-direction: column;
+        padding: 100px 60px;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.14' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    section#whatido .container {
+        max-width: unset;
+    }
+
+    section#whatido .content {
+        width: 100%;
+    }
+
+    section#whatido .fl-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 1105px;
+    }
+
+    section#whatido .icons {
+        gap: 10px 14px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .wid-list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .wid-list > div * {
+        transition: 0.2s;
+    }
+
+    .wid-list > div:hover {
+        cursor: cell;
+    }
+
+    .wid-list > div:hover span.list-title {
+        color: #00f5d4;
+    }
+
+    .wid-list > div:hover .list-inner {
+        border-color: #00f5d4;
+    }
+
+    .list-inner {
+        padding: 48px;
+        border-radius: 12px;
+        border: 10px solid #a1a1a1;
+        background-color: #232323;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.04' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        min-height: 292px;
+        box-shadow: inset 10px 10px 10px rgb(0 0 0 / 70%);
+    }
+
+    .list-inner h3 {
+        font-size: 23px;
+        color: #ccc;
+    }
+
+    .list-inner p {
+        color: #959595;
+        margin-bottom: 0;
+    }
+
+    span.list-title {
+        display: block;
+        line-height: 1;
+        text-align: center;
+        font-weight: 800;
+        font-size: 170px;
+        font-family: 'Geist Mono';
+        margin-bottom: -27px;
+        color: #a1a1a1;
+    }
+    
+    @media all and (max-width: 1440px) {
+        section#whatido .fl-container {
+            max-width: 1100px;
+        }
+
+        span.list-title {
+            font-size: 150px;
+            margin-bottom: -23px;
+        }
+
+        .list-inner {         
+            padding: 48px 36px;
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+        img.solo-img {
+            min-height: 655px;
+        }
+
+        .wid-list > div {
+            width: calc(33.33% - 14px);
+        }
+    }
+
+    @media all and (max-width: 1023px) {
+        section#whatido {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        section#whatido .content-inner {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        section#whatido .content p {
+            font-size: 16px;
+        }
+
+        section#whatido svg.separator-top path.shape-fill {
+            fill: #010101;
+        }
+
+        .wid-list > div {
+            width: 100%;
+        }
+
+        .list-inner {
+            min-height: unset;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        section#whatido .icons {
+            width: calc(100% - 31px);
+            column-gap: 5px;
+        }
+
+        section#whatido .content-inner {
+            padding-left: 24px;
+            padding-right: 40px;
+        }
+    }
+    </style>
+
+    <!-- Beyond Work -->
+    <section id="beyondWork" class="section">
+
+        <div class="container flex-container column-switch">
+            <div class="content smr btm-img">
+                <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/ace2-final.webp" class="left-img" alt="Laptop"/>
+            </div>
+            <div class="content bgr">
+                <div class="content-inner">
+                    <div class="spacer"></div>
+                    <h2>Beyond <span class="hl">Work</span></h2>
+                    <div class="c-separator"></div>
+                    <p class="align-t-justify no-margin">I am also currently serving as church media volunteer every weekend for 7 years on graphics ministry where I help create ppt/canva preaching presentations, and in video ministry where I serve as a main camera man on sunday services.</p>
+                    <div class="spacer-sm"></div>
+
+                    <h3>Hobbies/Favorites</h3>
+                    <p class="fav"><span>Badminton</span> <span>Monochrome</span> <span>paintings</span> <span>pc games</span> <span>cheesecakes</span> <span>potato giant</span> <span>potato corner</span> <span>bff fries</span> <span>Zinger burger</span> <span>Champ Burger</span> <span>Shakey's pizza</span> <span>photography</span> <span>kdrama</span></p>
+
+                    <div class="spacer-sm"></div>
+
+                    <h3>Socials</h3>
+                    <div class="icons">
+                        <a href="https://www.behance.net/miguelace" target="_blank"><img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/behance.png"/></a>
+                        <a href="https://www.linkedin.com/in/acrx" target="_blank"><img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/linkedin.png"/></a>
+                        <a href="https://www.facebook.com/acerexm" target="_blank"><img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/facebook.png"/></a>
+                    </div>
+                    <div class="spacer hide-on-ib"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>    
+
+    <style>
+    #beyondWork {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.09' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+
+    #beyondWork .flex-container {
+        max-width: 1440px;
+    }
+
+    section#beyondWork .cta {
+        justify-content: flex-start;
+    }
+
+    img.left-img {
+        width: 100%;
+    }
+
+    .no-margin {
+        margin: 0;
+    }
+
+    .content.btm-img {
+        align-content: flex-end;
+    }
+
+    .content-inner {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @media all and (min-width: 1024px) {
+        #beyondWork .btm-img img {
+            height: calc(100vh - 60px);
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+
+    @media all and (max-width: 1023px) {
+        .hide-on-ib {
+            display: none;
+        }
+
+        .content-inner {
+            max-width: unset;
+        }
+
+        .flexd-column {
+            flex-direction: column;
+        }
+
+        .column-switch {
+            flex-direction: column-reverse;
+        }
+    }
+    </style>
+    <!-- End of Beyond Work -->
+    
 
 
     <!-- Section 4 -->
-    <section id="section4" class="section">
-        <div class="content">
-            <h1>Section 4</h1>
-            <p>This is the fourth section.</p>
+    <section id="works" class="section">
+        
+        <svg class="separator-top w-image-above" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" fill="#ffffff" class="shape-fill"></path>
+        </svg>
+
+        <svg class="separator-bottom" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 1200 120" preserveAspectRatio="none">
+            <path d="M649.97 120L550.03 120 599.91 65.88 649.97 120z" fill="#121212" class="shape-fill"></path>
+        </svg>
+
+        <div class="container">
+
+            <div class="content content-full-width h-m-btm padding-m">
+                
+                <h2 class="text-center fc-white text-left-m">Works</h2>
+                <p class="text-center fc-white text-left-m no-margin">Shopify Loyalty landing pages & Full wordpress site builds.</p>
+            </div>
+
+            <div class="works-container">
+                
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-huda.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-1.png" alt="Huda Loyalty Page"/>
+                    <p class="shopify">Huda</p>
+                    </a>
+                </div> 
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-gia.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-2.png" alt="Gia Loyalty Page"/>
+                    <p class="shopify">Gia</p>
+                    </a>
+                </div> 
+                
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-1md.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-3.png" alt="1MD Loyalty Page"/>
+                    <p class="shopify">1MD</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-Blenders.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-4.png" alt="Blenders Loyalty Page"/>
+                    <p class="shopify">Blenders</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-dermazen.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-5.png" alt="Dermazen Loyalty Page"/>
+                    <p class="shopify">Dermazen</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-dixxon.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-6.png" alt="Dixxon Loyalty Page"/>
+                    <p class="shopify">Dixxon</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-foggy.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-7.png" alt="Foggydog Loyalty Page"/>
+                    <p class="shopify">Foggydog</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-gldn.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-8.png" alt="GLDN Loyalty Page"/>
+                    <p class="shopify">GLDN</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-gretel.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-9.png" alt="UND Loyalty Page"/>
+                    <p class="shopify">UND</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-koh-perks.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-10.png" alt="KOH Loyalty Page"/>
+                    <p class="shopify">KOH</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-nobull.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-11.png" alt="Nobull Loyalty Page"/>
+                    <p class="shopify">Nobull</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-perdays.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-12.png" alt="Perdays Loyalty Page"/>
+                    <p class="shopify">Perdays</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-tyr.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-13.png" alt="TYR Loyalty Page"/>
+                    <p class="shopify">TYR</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-vets.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-14.png" alt="VLP Loyalty Page"/>
+                    <p class="shopify">VLP</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/shopify-knobby.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-15.png" alt="Knobby Loyalty Page"/>
+                    <p class="shopify">Knobby</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-lifegiverchurch.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp1.png" alt="WP - Lifegiver"/>
+                    <p class="wp">Lifegiver</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-pinnaclegrow.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp2.png" alt="WP - Pinnacle Grow"/>
+                    <p class="wp">Pinnacle</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-CDC.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp3.png" alt="WP - Cheekwood"/>
+                    <p class="wp">Cheekwood</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-medical.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp4.png" alt="WP - Medical Office"/>
+                    <p class="wp">Medical</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-colgate.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp5.png" alt="WP - Colgate"/>
+                    <p class="wp">Colgate</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-lawoffice.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp6.png" alt="WP - Law Office"/>
+                    <p class="wp">Law Office</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-A1.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp7.png" alt="WP - A1"/>
+                    <p class="wp">A1</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-cedric.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp8.png" alt="WP - Cedric"/>
+                    <p class="wp">Cedric</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-tableofplenty.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp9.png" alt="WP - Table of Plenty"/>
+                    <p class="wp">Plenty</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/wp-crossbows.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp10.png" alt="WP - Crossbows"/>
+                    <p class="wp">Crossbows</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/custom-fellowship.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp11.png" alt="Custom - Fellowship Home Loans"/>
+                    <p>Home Loans</p>
+                    </a>
+                </div>
+
+                <div class="works-column">
+                    <a href="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/custom-notes.webp" target="_blank">
+                    <img src="https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/works/works-wp12.png" alt="Custom - Notepads"/>
+                    <p>Notepads</p>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/works-background.jpg -->
+    </section>
+
+    <style>
+    .fc-white {
+        color: #fff;
+    }
+
+    .spacer {
+        height: 60px;
+    }
+
+    .content-full-width {
+        width: 100%;
+    }
+
+    #works {
+        background-image: url("https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/works-bg.webp");
+        background-size: contain;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .separator-top {
+        position: absolute;
+        top: 0;
+        min-height: 150px;
+    }
+
+    .separator-bottom {
+        position: absolute;
+        bottom: 0;
+        min-height: 150px;
+    }
+
+    #works .content p {
+        font-size: 18px;
+    }
+
+    .works-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*.works-column {
+        background-image: url("https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/works-background.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 16px;
+        padding: 32px 40px;
+        width: calc(33.3% - 13px);
+    }*/
+
+    .works-column {
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+        width: calc(33.3% - 14px);
+    }
+
+    .works-column a {
+        text-decoration: none;
+    }
+
+    .works-column img {
+        max-width: 340px;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    .works-column:hover img {
+        transform: scale(1.045);
+    }
+
+    .works-column p {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    p.shopify::before {        
+        content: "";
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-shopify.png");
+    }
+
+    p.wp::before {
+        content: "";
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("https://raw.githubusercontent.com/acerexm/acerexm.github.io/refs/heads/main/images/icons/ic-wordpress-white.png");
+    }
+
+    @media all and (max-width: 1023px) {
+        #works {
+            background-size: cover;
+            padding: 100px 30px;
+        }
+
+        .text-left-m {
+            text-align: left;
+        }
+
+        .spacer-mobile {
+            height: 35px;
+        }
+
+        .padding-m {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* Adjust separator-top placement */
+    .w-image-above {
+        top: -2px;
+        z-index: 2;
+    }
+    
+    @media all and (max-width: 1023px) and (min-width: 600px){
+        .w-image-above {transform: translateX(-190px);}
+    }
+
+    @media all and (max-width: 599px) and (min-width: 400px) {
+        .w-image-above {transform: translateX(-110px);}
+    }
+
+    @media all and (max-width: 399px) {
+        .w-image-above {transform: translateX(-90px);}
+    }
+    /* End of Adjust separator-top placement */
+
+    @media all and (max-width: 768px) {
+        .works-column {
+            width: calc(50% - 10px);
+            padding: 10px 0 15px;
+        }
+    }
+
+    @media all and (max-width: 480px) {
+         #works {
+            background-size: cover;
+            padding-left: 24px;
+            padding-right: 40px;
+        }
+
+        .works-container {
+            gap: 10px;
+        }
+
+        .works-column {
+            width: calc(50% - 5px);
+            padding: 10px 0 15px;
+        }
+
+        .works-column p {
+            font-size: 14px;
+        }
+    }
+    </style> 
+
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container flex-container">
+            <div class="content smr">
+                <h3>Let's <span class="hl">connect!</span></h3>
+                <div class="c-info-socials">
+                    <div class="cis-container">
+                        <a href="mailto:miguelacerex@gmail.com"><span class="cis-text">miguelacerex@gmail.com</span></a>
+                        <a href="mailto:miguelacerex@gmail.com">
+                        <svg fill="#ffffff" width="800px" height="800px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 28.0468 30.7070 C 29.0312 30.7070 29.9218 30.2617 30.9296 29.2305 L 51.3200 9.0508 C 50.4532 8.2070 48.8360 7.8086 46.5157 7.8086 L 8.7812 7.8086 C 6.8124 7.8086 5.4296 8.1836 4.6562 8.9570 L 25.1640 29.2305 C 26.1718 30.2383 27.0858 30.7070 28.0468 30.7070 Z M 2.7109 44.4180 L 19.2812 28.0352 L 2.6640 11.6523 C 2.3124 12.3086 2.1249 13.4336 2.1249 15.0508 L 2.1249 40.9258 C 2.1249 42.5898 2.3358 43.7617 2.7109 44.4180 Z M 53.3360 44.3945 C 53.6874 43.7148 53.8751 42.5664 53.8751 40.9258 L 53.8751 15.0508 C 53.8751 13.4805 53.7109 12.3555 53.3591 11.7227 L 36.8124 28.0352 Z M 9.4843 48.1914 L 47.2184 48.1914 C 49.1874 48.1914 50.5468 47.8164 51.3200 47.0664 L 34.4452 30.3320 L 32.8749 31.9023 C 31.2812 33.4492 29.7577 34.1523 28.0468 34.1523 C 26.3358 34.1523 24.8124 33.4492 23.2187 31.9023 L 21.6484 30.3320 L 4.7968 47.0430 C 5.6874 47.8164 7.2577 48.1914 9.4843 48.1914 Z"/>
+                        </svg></a>
+                    </div>
+                    <div class="cis-container">
+                        <a href="https://www.linkedin.com/in/acrx" target="_blank"><span class="cis-text">www.linkedin.com/in/acrx</span></a>
+                        <a href="https://www.linkedin.com/in/acrx" target="_blank">
+                        <svg fill="#ffffff" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21,2H3A1,1,0,0,0,2,3V21a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V3A1,1,0,0,0,21,2ZM8.078,18.737H5.085v-9H8.078ZM6.582,8.5h-.02A1.56,1.56,0,1,1,6.6,5.393,1.56,1.56,0,1,1,6.582,8.5ZM18.87,18.737H15.877V13.921c0-1.211-.433-2.036-1.516-2.036a1.637,1.637,0,0,0-1.535,1.094,2.032,2.032,0,0,0-.1.731v5.027H9.734s.04-8.16,0-9h2.992V11.01a2.97,2.97,0,0,1,2.7-1.488c1.969,0,3.446,1.287,3.446,4.053Z"/>
+                        </svg></a>
+                    </div>
+
+                    <div class="cis-container">
+                        <span class="cis-text">Metro Manila, Philippines</span>
+                        <svg fill="#ffffff" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                             viewBox="0 0 297 297" xml:space="preserve">
+                            <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645
+                            c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645
+                            C259.253,49.703,209.57,0,148.5,0z M148.5,79.693c16.964,0,30.765,13.953,30.765,31.104c0,17.151-13.801,31.104-30.765,31.104
+                            c-16.964,0-30.765-13.953-30.765-31.104C117.735,93.646,131.536,79.693,148.5,79.693z"/>
+                        </svg>
+                    </div>
+
+                    <div class="cis-container">
+                        <span class="cis-text">Philippine Standard Time, UTC+8</span>
+                        <svg width="800px" height="800px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" id="Слой_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g>
+                            <path d="M3.7796631,8.75C4.1953125,10.6790771,5.0326538,12,6,12s1.8046875-1.3209229,2.2203369-3.25H3.7796631z" fill="#ffffff"/>
+                            <path d="M9.2371216,3.25h2.0916748c-0.664978-1.2857056-1.779541-2.2975464-3.1375122-2.8312378   C8.6710815,1.1671753,9.0209351,2.1549683,9.2371216,3.25z" fill="#ffffff"/>
+                            <path d="M8.3912964,4.25H3.6087036C3.5383911,4.803833,3.5,5.3909912,3.5,6s0.0383911,1.196167,0.1087036,1.75   h4.7825928C8.4616089,7.196167,8.5,6.6090088,8.5,6S8.4616089,4.803833,8.3912964,4.25z" fill="#ffffff"/>
+                            <path d="M9.5,6c0,0.5882568-0.0372925,1.1765137-0.1055298,1.75h2.3445435C11.9077148,7.196167,12,6.6090088,12,6   s-0.0922852-1.196167-0.2609863-1.75H9.3944702C9.4627075,4.8234863,9.5,5.4117432,9.5,6z" fill="#ffffff"/>
+                            <path d="M8.2203369,3.25C7.8046875,1.3209229,6.9673462,0,6,0S4.1953125,1.3209229,3.7796631,3.25H8.2203369z" fill="#ffffff"/>
+                            <path d="M2.7628784,8.75H0.6712036c0.664978,1.2857056,1.779541,2.2975464,3.1375122,2.8312378   C3.3289185,10.8328247,2.9790649,9.8450317,2.7628784,8.75z" fill="#ffffff"/>
+                            <path d="M2.5,6c0-0.5882568,0.0372925-1.1765137,0.1055298-1.75H0.2609863C0.0922852,4.803833,0,5.3909912,0,6   s0.0922852,1.196167,0.2609863,1.75h2.3445435C2.5372925,7.1765137,2.5,6.5882568,2.5,6z" fill="#ffffff"/>
+                            <path d="M9.2371216,8.75c-0.2161865,1.0950317-0.56604,2.0828247-1.0458374,2.8312378   C9.5492554,11.0475464,10.6638184,10.0357056,11.3287964,8.75H9.2371216z" fill="#ffffff"/>
+                            <path d="M2.7628784,3.25c0.2161865-1.0950317,0.56604-2.0828247,1.0458374-2.8312378   C2.4507446,0.9524536,1.3361816,1.9642944,0.6712036,3.25H2.7628784z" fill="#ffffff"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="cis-container">
+                        <span class="cis-text">
+                        Open to remote roles
+                        </span>
+                        <span class="availability-icon s-yes"></span>
+                    </div>                     
+                </div>
+            </div>
+            <div class="content bgr">
+                <h2 class="contact-heading">Get <span class="hl">in touch</span></h2>
+                <div class="form-container">
+                    <p class="align-t-justify">Whether you have a <span class="hl">job opportunity</span>, a <span class="hl">project proposal</span>, or just want to chat about my work, I’d love to hear from you. <span class="hl">Drop your details below</span>, and I’ll get back to you as soon as possible.</p>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                      <input type="hidden" name="access_key" value="91021666-506a-4e5a-8f3f-14259c748de5">
+                      <input type="text" name="name" placeholder="Name" id="name" name="name" required>
+                      <input type="email" name="email" placeholder="Email" required>
+                      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                      <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
+    <style>
+    section#contact {
+        background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.14' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
 
-    <!-- Section 5 -->
-    <section id="section5" class="section">
-        <div class="content">
-            <h1>Section 5</h1>
-            <p>This is the fifth section.</p>
-        </div>
-    </section>
+    section#contact h3 {
+        color: #fff;
+        text-align: right;
+        font-size: 48px;
+        margin-bottom: 25px;
+    }
+
+    section#contact h3::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 10px;
+        background-color: #00f5d4;
+        margin-top: 15px;
+        margin-left: auto;
+    }
+
+    .c-info-socials {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: flex-end;
+    }
+
+    .cis-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .cis-container a {
+        text-decoration: none;
+    }
+
+    .cis-container a span {
+        color: #00f5d4;
+    }
+
+    .cis-container svg {
+        max-width: 34px;
+        height: auto;
+        width: 100%;
+    }
+
+    .cis-container:has(.availability-icon) {
+        gap: 10px;
+    }
+
+    span.cis-text {
+        color: #fff;
+        line-height: 1.6;
+        text-align: right;
+        font-family: 'Geist Mono', sans-serif;
+    }
+
+    img.cis-icon {
+        max-width: 40px;
+    }
+
+    .invert-w {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(69deg) brightness(107%) contrast(101%);
+    }
+
+    span.availability-icon {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background-color: #f00;
+        border-radius: 100%;
+        margin-bottom: auto;
+        margin-top: 4px;
+    }
+
+    span.availability-icon.s-yes {
+        background-color: #0f0;
+    }
+
+    #contact-form {
+        border-radius: 8px;
+        margin: 30px auto 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 48px;
+        background-color: #fff;
+        border: 10px solid #616161;
+        border-radius: 16px;
+        /*background-color: #161616;*/
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.04' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        background-color: #232323;
+        box-shadow: inset 10px 10px 10px rgb(0 0 0 / 70%);
+        position: relative;
+    }
+
+    .form-container::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        box-shadow: 0 130px 141px -149px #00ffdd;
+    }
+
+    .form-container .hl {
+        font-size: 21px;
+        font-weight: 800;
+    }
+
+    .contact-heading {
+        color: #616161;
+        font-size: 100px;
+        margin-bottom: -15px;
+        margin-left: 16px;
+        position: relative;
+        z-index: -1;
+    }
+
+    .form-container p {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    input:-internal-autofill-selected {
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;  
+      -webkit-text-fill-color: #ffffff !important;
+      outline: 1px solid #00f5d4 !important; 
+      box-shadow: 0 0 0px 1000px #1d1d1d inset !important; /* Keeps shadow intact during focus */
+    }
+
+    form#contact-form input {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #616161;
+        background-color: #000;
+        border-radius: 9px;
+        color: #fff;
+    }
+
+    form#contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        resize: none;
+        border: 1px solid #616161;
+        background-color: #000;
+        border-radius: 9px;
+        color: #fff;
+    }
+
+    form#contact-form input,
+    form#contact-form textarea {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: 'Geist Mono', sans-serif;
+    }
+
+    form#contact-form input:focus-visible,
+    form#contact-form textarea:focus-visible {
+        outline: 1px solid #00f5d4;
+    }
+
+    form#contact-form button {
+        cursor: pointer;
+        color: #000;
+        background-color: #00f5d4;
+        padding: 15px 25px;
+        border-radius: 4px;
+        display: inline-block;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        transition: 0.2s;
+        border: 1px solid #000;
+    }
+
+    form#contact-form button:hover {
+        background-color: #000;
+        color: #00f5d4;
+        transform: scale(1.075);
+        border-color: #00f5d4;
+    }
+
+    @media all and (max-width: 1440px) {
+        section#contact {
+            background-position: 25% center;
+        }
+    }
+
+    @media all and (max-width: 1025px) {
+        .cis-container {
+            flex-direction: row-reverse;
+            gap: 15px;
+        }
+
+        section#contact h3 {
+            text-align: left;
+        }
+
+        span.cis-text {
+            text-align: left;
+        }
+
+        section#contact h3::after {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+
+    @media all and (max-width: 768px) {
+        section#contact {
+            min-height: unset;
+        }
+
+        section#contact h3 {
+            font-size: 36px;
+        }
+    }
+
+    @media all and (max-width: 670px) {
+        section#contact h2.contact-heading {
+            font-size: 49px;
+            margin-bottom: -7px;
+        }
+    }
+
+    @media all and (min-width: 481px) {
+        form#contact-form input {
+            width: calc(50% - 10px);
+        }   
+    }
+
+    @media all and (max-width: 480px) {
+        .form-container {
+            padding: 36px 24px;
+        }
+
+        form#contact-form input,
+        form#contact-form textarea {
+            font-size: 14px;
+        }
+
+        .form-container p,
+        span.cis-text {
+            font-size: 14px;
+        }
+
+        .cis-container svg {
+            max-width: 24px;
+        }
+    }
+
+    @media all and (max-width: 425px) {
+        .form-container::after {
+            box-shadow: 0 80px 141px -80px #00ffdd;
+        }
+
+        .form-container .hl {
+            font-size: 13px;
+        }
+    }
+
+    @media all and (max-width: 375px) {
+        .form-container .hl {
+            font-size: 17px;
+        }
+    }
+    </style>
+
+    <!-- Footer -->
+    <footer>
+            <span class="b-verse">Psalm 23:1</span>
+            <span class="b-content">The <span class="hl"><strong>LORD</strong></span> is my shepherd, I lack nothing.</span>
+    </footer>    
 
 
     <script>
@@ -234,12 +1433,31 @@
                 });
             },
             {
-                threshold: 0.5
+                rootMargin: "-20% 0px -60% 0px",
+                threshold: 0
             }
         );
 
         sections.forEach(section => {
             observer.observe(section);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     </script>
 
