@@ -1089,7 +1089,7 @@
                         <span class="cis-text">
                         Open to remote roles
                         </span>
-                        <span class="availability-icon s-yes"></span>
+                        <span class="availability-icon s-no"></span>
                     </div>                     
                 </div>
             </div>
@@ -1184,7 +1184,7 @@
         width: 16px;
         height: 16px;
         display: block;
-        background-color: #f00;
+        background-color: #5f5f5f;
         border-radius: 100%;
         margin-bottom: auto;
         margin-top: 4px;
@@ -1192,6 +1192,10 @@
 
     span.availability-icon.s-yes {
         background-color: #0f0;
+    }
+
+    .cis-container:has(.s-no) {
+        text-decoration: line-through;color: #5f5f5f;
     }
 
     #contact-form {
